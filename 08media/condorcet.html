@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Randal Marsh">
+    <meta name="description" content="Randy's hobbys, creations, and interests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nothing+You+Could+Do&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="randal-marsh.css">
+    <link rel="icon" href="favicon.webp">
+    <title>Randal Marsh</title>
+</head>
+
+<body>
+    <header>
+        <figure class="knot">
+        <img src="images/tin-logo.webp" alt="TinShoe Knot" width="100" height="100">
+        </figure>
+        
+        <figure class="signature">
+
+        <img src="images/signature-logo.webp" alt="Randal Marsh" width="500" height="66">
+        </figure>
+        <!-- <span>Randal Marsh</span> -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="art.html">Art</a></li>
+            <li><a href="the-glug.html">The Glug</a></li>
+            <li><a href="game-design.html">Game Design</a></li>
+            <li class="active"><a href="condorcet.html">Condorcet</a></li>
+            <li><a href="reflections.html">Reflections</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <!-- The radial menu will eventually replace this explanatory text. -->
+        <h1>Condorcet</h1>
+        <p>This will be a tool for making condorcet selections at home. We mostly use this tool for choosing
+            movies to watch. Condorcet logic is under construction.</p>
+        <form method="get" class="ballot" action="thanks.html">
+            <fieldset>
+                <legend>Voter Information</legend>
+                <label>First Name*<input type="text" name = "fname" required></label>
+                <label>Last Name*<input type="text" name = "lname" required></label>
+                <label>Email*<input type="email" name = "email" required></label>
+                <label>Phone<input type="tel" name="phone" placeholder="###-###-####"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dates</legend>
+                <label><input type ="checkbox" name= "mon" value="yes">Monday</label>
+                <label><input type ="checkbox" name= "tues" value="yes">Tuesday</label>
+                <label><input type ="checkbox" name= "wed" value="yes">Wednesday</label>
+                <label><input type ="checkbox" name= "thur" value="yes">Thursday</label>
+                <label><input type ="checkbox" name= "fri" value="yes">Friday</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ballot</legend>
+                <p>Which film would you most like to watch?*</p>
+                <label><input type="radio" name="vote" value="gattaca" required>Gattaca</label>
+                <label><input type="radio" name="vote" value="intersellar" required>Interstellar</label>
+                <label><input type="radio" name="vote" value="martian" required>The Martian</label>
+                <label><input type="radio" name="vote" value="project" required>Project Hail Mary</label>
+                <label><input type="radio" name="vote" value="arrival required">Arrival</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Concessions</legend>
+                <p>Which concession do you want to take charge of this month?</p>
+                <label>
+                <select name="time">
+                    <option value="none">Select</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="popcorn">Popcorn</option>
+                    <option value="theme">Themed treat</option>
+                </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feedback</legend>
+                <label><textarea name="feedback"></textarea></label>
+            </fieldset>
+
+            <input type="submit" value="Place your vote!">
+        </form>
+        <h2>About Condorcet</h2>
+        <p>The Condorcet winner of an election is the candidate who would win head-to-head against each of the other candidates. You can imagine a slow way to handle this: the voter considers each pair individually, choosing A vs B, A vs C, B vs C, etc.</p>
+        <p>To streamline this, the voter instead ranks the list of candidates. If, for example, the voter places A above B and B above C, they express their preference in all three head to head match ups at once. The ballot can be considered in a matrix like this:</p>
+        <table class="ranked-choice">
+            <tr>
+                <th>Choice</th><th>A</th><th>B</th><th>C</th>
+            </tr>
+            <tr>
+                <th>A</th><td>-</td><td>W</td><td>W</td>
+
+            </tr>
+            <tr>
+                <th>B</th><td>L</td><td>-</td><td>W</td>
+
+            </tr>
+            <tr>
+                <th>C</th><td>L</td><td>L</td><td>-</td>
+
+            </tr>
+            
+        </table>
+        <p>To calculate the full group of voters, we tally the total head-to-head wins from all the ballots. This gives us a matrix that might look something like this:</p>
+                <table class="ranked-choice">
+            <tr>
+                <th>Choice</th><th>A</th><th>B</th><th>C</th>
+            </tr>
+            <tr>
+                <th>A</th><td>-</td><td>8</td><td>6</td>
+
+            </tr>
+            <tr>
+                <th>B</th><td>2</td><td>-</td><td>7</td>
+
+            </tr>
+            <tr>
+                <th>C</th><td>4</td><td>3</td><td>-</td>
+
+            </tr>
+        
+            
+        </table>
+        <p>A beats B (8 to 2) and A beats C (6 to 4), so A is the Condorcet winner.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 &bull; Randal Marsh &bull; DWDD 1600</p>
+    </footer>
+
+
+
+</body>
+
+</html>

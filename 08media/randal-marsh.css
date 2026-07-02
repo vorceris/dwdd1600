@@ -1,0 +1,394 @@
+/* Prevent problems on different browsers */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    margin: 0;
+    background-color: #f7f7f1;
+}
+
+header,
+nav,
+main,
+footer {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/* header styling details */
+header {
+    width: 85%;
+    min-width:350px;
+    max-width: 600px;
+    padding: 1.9rem 0 .9rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header figure {
+    margin: 0;
+    
+}
+
+header figure.knot {
+    
+    padding-right: 1rem;
+}
+
+header figure img {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+
+}
+
+
+
+/* For use with text title to replace image title */
+/* header span {
+    color: #272727;
+    font-size: 3.2rem;
+    font-family: "Nothing You Could Do", cursive;
+    line-height: 3.2rem;
+
+} */
+
+/* small screens navigation */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        margin: 0;
+        padding: 0 10px;
+        list-style-type: none;
+
+    }
+
+    nav a {
+        display: block;
+        padding: .6rem .8rem;
+        text-decoration: none;
+        color: #676767;
+        font-size: 1.4rem;
+        font-weight: 400;
+        /* create an invisible border to avoid a shift when active border appears */
+        border: 1px solid transparent;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+    }
+
+    nav li a:hover {
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #dfdfdf;
+    }
+
+    nav li.active a {
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #bcbcbc;
+        text-decoration: none;
+    }
+}
+/* This ends small screen navigation */
+
+/* large screens navigation */
+@media only screen and (min-width: 601px) {
+    nav ul {
+        margin: 0;
+        padding: 0 10px;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        display: block;
+        padding: .6rem .8rem;
+        text-decoration: none;
+        color: #676767;
+        font-size: 1.4rem;
+        font-weight: 400;
+        /* create an invisible border to avoid a shift when active border appears */
+        border: 1px solid transparent;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+    }
+
+    nav li a:hover {
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #dfdfdf;
+    }
+
+    nav li.active a {
+        border: 1px solid;
+        border-radius: 4px;
+        border-color: #bcbcbc;
+        text-decoration: none;
+    }
+}
+/* This ends large screen navigation */
+
+
+/* main body headings and paragraphs */
+main {
+    padding: 0;
+    width: 90%;
+    max-width: 64rem;
+    margin-inline: auto;
+}
+
+main div.center-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+.gradient {
+    background-image: linear-gradient(to bottom, #fff, #dfdfdf, #fff);
+}
+
+figure.radial {
+    width: 60%;
+    max-width: 360px;
+}
+
+figure.radial img {
+    width: 100%;
+    height: auto;
+
+
+}
+
+figure.radial figcaption {
+    font-size: .75rem;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+
+main h1 {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 300;
+    margin-top: .8rem;
+    margin-bottom: .4rem;
+    color: #676767;
+    font-size: 1.4rem;
+}
+
+main h2 {
+    letter-spacing: .11rem;
+    margin-bottom: .2rem;
+    margin-top: 1.2rem;
+    color: #676767;
+    font-size: 1.2rem;
+    font-weight: 350;
+
+}
+
+main p {
+    margin: 0;
+    color: #272727;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+main ol {
+    padding: .0rem 30px;
+}
+
+main ul {
+    list-style-type: circle;
+}
+
+main ul li {
+    line-height: 125%
+}
+
+main dl dt {
+    color: #676767;
+    margin-top: 1rem;
+    margin-left: 30px;
+}
+
+main dl dd {
+    margin-left: 30px;
+}
+
+main address {
+    font-style: normal;
+
+}
+
+main a {
+    color: #1a3f55;
+}
+
+main a:visited {
+    color: rgb(83, 32, 85);
+}
+
+main a:hover {
+    color: #7c7c7c;
+}
+
+/* Main Section Images */
+figure.wrapped {
+    margin: 0 0 0 10px;
+    width: 40%;
+    min-width: 180px;
+    max-width: 600px;
+    float: right;
+}
+
+figure.wrapped img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Gallery Styling */
+div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px
+}
+
+div.gallery figure {
+    margin: 0;
+    width: 24%;
+    max-width: 400px;
+    min-width: 160px;
+    ;
+}
+
+div.gallery figure img {
+    width: 100%;
+
+    height: auto;
+}
+
+div.gallery img:hover {
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
+}
+
+/* Ballot Submission Form styling */
+.ballot fieldset {
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.ballot legend {
+    color: #676767;
+    font-size: .8rem;
+}
+
+.ballot label {
+    margin: .5rem;
+}
+
+.ballot fieldset p {
+    margin: .5rem;
+}
+
+.ballot label,
+select,
+textarea,
+[type=text],
+[type=tel],
+[type=email] {
+    display: block;
+}
+
+.ballot [type=text],
+[type=tel],
+[type=email],
+select,
+textarea {
+    border-radius: 3px;
+    border: solid 1px #bcbcbc;
+    width: 250px;
+    padding: .3rem;
+}
+
+.ballot [type=text],
+[type=tel],
+[type=email],
+textarea {
+    background-color: white;
+    color: #272727;
+}
+
+.ballot [type=submit] {
+    background-color: white;
+    color: #676767;
+    border: 1px solid #676767;
+    border-radius: 7px;
+    font-family: "Merriweather";
+    padding: 1rem 2rem;
+    font-size: medium;
+}
+
+.ballot [type=submit]:hover {
+    color: #272727;
+    border: 1px solid #272727;
+    background-color: #eeeeee;
+
+}
+
+/* Table Styling */
+table.ranked-choice {
+    width: 100%;
+    max-width: 300px;
+    border-collapse: collapse;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    table-layout: fixed;   
+}
+table.ranked-choice th {
+    background-color: #dfdfdf;
+    
+    padding: .6rem 2%;
+    text-align: left;
+    border: 1px solid white;
+     
+}
+table.ranked-choice td {
+    color: #272727;
+    padding: .4rem 2%
+}
+table.ranked-choice tr:nth-child(odd) {
+    background-color: #ebebeb;
+}
+table.ranked-choice tr:hover {
+    background-color: #d4edaf;
+}
+
+
+
+/* styling for the footer section */
+footer {
+    text-align: center;
+    color: #eee;
+    clear: both;
+    margin-top: 30px;
+    font-size: .7rem;
+}
+
