@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Randal Marsh">
+    <meta name="description" content="Vaction offerings">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font stuff -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="budget-vacation.css">
+    <title>Budget Vacations</title>
+</head>
+
+<body>
+    <header>
+        <img class = "logo" src="images/logo.webp" alt="glass logo" width="82" height="82">
+        <span>Budget<br>Vacations</span>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li class="active"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form method="get" class="contact" action="thanks.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>First Name*<input type="text" name = "fname" required></label>
+                <label>Last Name*<input type="text" name = "lname" required></label>
+                <label>Email*<input type="email" name = "email" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Getaway Hopes</legend>
+                <p>Is there a destination you are eying?</p>
+                <label>
+                    <select name="time">
+                        <option value="none">Select</option>
+                        <option value="tahoe">Lake Tahoe</option>
+                        <option value="alexander">Alexander Lake</option>
+                        <option value="reef">Capitol Reef</option>
+                        <option value="bearlake">Bear Lake</option>
+                    </select>
+                </label>
+                <p>What month are you hoping to leave?</p>
+                <label><input type="radio" name="month" value="May">May</label>
+                <label><input type="radio" name="month" value="June">June</label>
+                <label><input type="radio" name="month" value="July">July</label>
+                <label><input type="radio" name="month" value="August">August</label>
+                <label><input type="radio" name="month" value="September">September</label>
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Other Questions</legend>
+                <p>What other questions can we answer for you?</p>
+                <label><textarea name="questions"></textarea></label>
+            </fieldset>
+            <input type="submit" value="Request Info">
+        </form>
+
+
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 &bull; Randal Marsh &bull; DWDD 1600</p>
+    </footer>
+
+
+
+</body>
+
+</html>
